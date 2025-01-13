@@ -1,3 +1,5 @@
+#  Group 16
+
 # Time-Locked-Savings-Contract
 A savings contract where users deposit funds and withdraw only after the lock period.
 
@@ -10,11 +12,9 @@ It's use case is to encourage savings and restrict witdrawals unstil a set date 
 
 **Developers**
 1. Brian Mwangi Muthoni	
-2. Linder Stacy	
-3. Titus Maina Kamau	
-4. Mary Odhiambo	
-5. S Mwangi	
-6. Geofrey	
-7. Fredrick Ouya	
-8. SOLOMON KANIARU	
+2. Titus Maina Kamau	
+3. Mary Odhiambo	
+4. S Mwangi	
+5. Geofrey	Rian
+6. Solomon Kaniaru
 
