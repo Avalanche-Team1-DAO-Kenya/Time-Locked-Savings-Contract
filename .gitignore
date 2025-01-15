@@ -1,0 +1,4 @@
+Codebase/Backend/Pipfile
+Codebase/Backend/Pipfile.lock
+Codebase/Backend/instance/
+Codebase/Backend/app/__pycache__/
