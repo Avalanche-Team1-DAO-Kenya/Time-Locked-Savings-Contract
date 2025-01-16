@@ -9,11 +9,11 @@ module.exports = {
       url: process.env.FUJI_RPC_URL,
       chainId: 43113,
       accounts: [process.env.PRIVATE_KEY]
+    },
+    localhost: {
+      url: "http://127.0.0.1:8545",
+      chainId: 31337,
     }
   },
-  etherscan: {
-    apiKey: {
-      avalancheFujiTestnet: process.env.SNOWTRACE_API_KEY
-    }
-  }
+ 
 };
