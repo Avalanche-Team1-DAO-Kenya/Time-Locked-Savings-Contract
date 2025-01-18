@@ -1,6 +1,7 @@
 import React from 'react'
 import HomeTopSelectors from '../components/HomeTopSelectors'
 import HomeCarousel from '../components/HomeCarousel'
+import WebPage from '../components/webpage'
 
 
 const Home = () => {
@@ -12,7 +13,9 @@ const Home = () => {
       <div>
         <HomeCarousel />
       </div>
-     
+      <div>
+        <WebPage />
+      </div>
     </>
   )
 }

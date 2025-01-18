@@ -17,7 +17,7 @@ const Header = () => {
           </Link>
         </div>
         <div className='hidden lg:flex item-center w-full justify-between max-w-sm border rounded-full focus-within:shadow pl-2'>
-          <input type='text' placeholder='search product here...' className='w-full outline-none'/>
+          <input type='text' placeholder='search here..' className='w-full outline-none'/>
           <div className='text-lg w-13 h-8 bg-red-600 flex items-center justify-center rounded-r-full text-white'>
             <GrSearch />
           </div>
