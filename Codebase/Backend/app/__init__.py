@@ -17,8 +17,9 @@ def create_app():
     CORS(app)
     
     # Import and register blueprints
-    from app.routes import auth_bp
+    from app.routes import auth_bp, account_bp
     app.register_blueprint(auth_bp)
+    app.register_blueprint(account_bp)
     
     # Create database tables
     with app.app_context():
