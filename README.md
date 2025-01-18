@@ -3,7 +3,7 @@
 # Time-Locked-Savings-Contract
 A savings contract where users deposit funds and withdraw only after the lock period.
 
-It's use case is to encourage savings and restrict witdrawals unstil a set date by the user.
+It's use case is to encourage savings and restrict witdrawals until a set date by the user.
 
 **Project Overview**
 This repository contains the Frontend, Backend and Contract for the Pigzy. The Main features include:
