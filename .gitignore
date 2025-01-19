@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Hardhat files
+cache/
+artifacts/
+
+# IDE files
+.vscode/
+.idea/
+
+# Debug files
+*.log
+
+# Coverage files
+coverage/
+coverage.json
+
+# TypeChain files
+typechain/
+typechain-types/
+
+# Build files
+dist/
+build/
+
+# Hardhat Ignition default folder for deployments against a local node
+ignition/deployments/chain-31337
+
+
+=4.5.0
+=8.0.0
+=9.1.0
