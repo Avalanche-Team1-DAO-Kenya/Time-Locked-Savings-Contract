@@ -43,3 +43,4 @@ export function calculatePenalty(amount: number, timeRemaining: number): number 
   return amount * penaltyRate
 }
 
+

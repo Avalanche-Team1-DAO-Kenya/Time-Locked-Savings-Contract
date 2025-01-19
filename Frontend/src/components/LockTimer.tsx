@@ -58,3 +58,4 @@ const TimeUnit: React.FC<{ value: number; label: string }> = ({ value, label }) 
 );
 
 export default LockTimer;
+
