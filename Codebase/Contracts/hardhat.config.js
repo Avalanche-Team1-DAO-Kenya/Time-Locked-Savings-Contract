@@ -13,14 +13,20 @@ module.exports = {
     }
   },
   networks: {
-    fuji: {
-      url: process.env.FUJI_RPC_URL,
-      chainId: 43113,
-      accounts: [process.env.PRIVATE_KEY]
+    hardhat: {
     },
-    localhost: {
-      url: "http://127.0.0.1:8545",
-      chainId: 31337,
+    fuji: {
+      url: process.env.FUJI_URL,
+      chainId: 43113,
+      accounts: [process.env.PRIVATE_KEY],
+      timeout: 60000, // 60 seconds
+      gasPrice: "auto",
+      gas: "auto"
+    }
+  },
+  etherscan: {
+    apiKey: {
+      avalancheFujiTestnet: "snowtrace_api_key" // Add this if you want to verify
     }
   }
 };
