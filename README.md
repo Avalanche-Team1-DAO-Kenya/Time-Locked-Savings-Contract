@@ -1,129 +1,182 @@
-# Time-Locked Savings Contract
+<div align="center">
+  <img src="Codebase/Frontend/public/assets/logo.png" alt="Pigzzy Logo" width="200"/>
+  <h1>Pigzzy - Smart Time-Locked Savings</h1>
+  <p>A decentralized savings platform powered by smart contracts on Avalanche</p>
+  
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![React](https://img.shields.io/badge/React-18.x-blue)](https://reactjs.org/)
+  [![Avalanche](https://img.shields.io/badge/Avalanche-Fuji-red)](https://www.avax.network/)
+</div>
 
-A smart contract that enables users to create time-locked savings deposits with early withdrawal penalties, built on the Avalanche network.
+---
 
-## Overview
+## 🌟 Features
 
-The Time-Locked Savings Contract is a decentralized application that allows users to:
-- Make deposits with specified maturity dates
-- Withdraw funds after maturity with no penalty
-- Make early withdrawals with a configurable penalty fee
-- Track multiple deposits with different maturity dates
+- 🔒 **Time-Locked Savings**: Lock your funds until maturity for better returns
+- 🏦 **Smart Contract Security**: Your savings are protected by blockchain technology
+- 📊 **Progress Tracking**: Monitor your savings journey with detailed analytics
+- 🎯 **Goal Setting**: Set and achieve your savings targets
+- 💰 **Instant Deposits**: Secure your savings instantly with smart contract technology
+- 📱 **Web3 Integration**: Connect with Core Wallet, MetaMask, or any Web3 wallet
 
-## Features
+## 🚀 Quick Start
 
-- **Secure Deposits**: Users can deposit AVAX with custom maturity dates
-- **Penalty System**: Early withdrawals incur a configurable penalty (default 10%)
-- **Multiple Deposits**: Users can maintain multiple active deposits
-- **Penalty Collection**: Early withdrawal penalties are sent to a designated wallet
-- **Owner Controls**: Contract owner can adjust penalty rates (max 20%)
+### Prerequisites
 
-## Technology Stack
+- Node.js 16.x or later
+- Python 3.8 or later
+- Core Wallet or MetaMask
 
-- Solidity ^0.8.20
-- Hardhat Development Environment
-- OpenZeppelin Contracts
-- Avalanche Fuji Testnet
-- Node.js
-- Ethers.js
-
-## Prerequisites
-
-- Node.js (v14+ recommended)
-- npm or yarn
-- An Avalanche wallet with test AVAX
-- Basic knowledge of blockchain and smart contracts
-
-## Installation
-
-1. Clone the repository:
+### Frontend Setup
+```
 bash
-git clone https://github.com/yourusername/time-locked-savings-contract.git
-cd time-locked-savings-contract
-
-2. Install dependencies:
-bash
+cd Codebase/Frontend
 npm install
+npm run dev
+```
 
-3. Create a `.env` file:
-env
-PRIVATE_KEY=your_private_key
-FUJI_RPC_URL=https://api.avax-test.network/ext/bc/C/rpc
 
-## Contract Structure
-
-### Main Components
-
-- `struct Deposit`: Stores deposit information (amount, reason, maturity date, withdrawal status)
-- `mapping(address => Deposit[])`: Tracks user deposits
-- `earlyWithdrawalPenalty`: Configurable penalty rate
-- `penaltiesWallet`: Address receiving penalty fees
-
-### Key Functions
-
-- `deposit(string reason, uint256 maturityDate)`: Create a new time-locked deposit
-- `withdraw(uint256 depositIndex)`: Withdraw funds (with or without penalty)
-- `setPenaltyRate(uint256 _newPenalty)`: Update penalty rate (owner only)
-- `getDeposits()`: View all deposits for the caller
-
-## Testing
-
-Run the test suite:
+### Backend Setup
+```
 bash
-npx hardhat test
 
-The tests cover:
-- Deposit functionality
-- Withdrawal mechanics
-- Penalty calculations
-- Owner controls
-- Edge cases
+cd Codebase/Backend
+python -m venv venv
+source venv/bin/activate 
 
-## Deployment
+# On Windows:
+.\venv\Scripts\activate
+pip install -r requirements.txt
+python run.py
 
-Deploy to Fuji testnet:
-npx hardhat run scripts/deploy.js --network fuji
+```
 
-## Security Considerations
 
-- ReentrancyGuard implementation
-- Owner access control
-- Secure withdrawal pattern
-- Input validation
-- Time-based logic checks
+## 🏗️ Project Structure
+```
+Codebase/
+├── Frontend/
+│ ├── src/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ ├── hooks/
+│ │ └── services/
+│ └── public/
+└── Backend/
+├── contracts/
+├── scripts/
+└── tests/
+```
 
-## Contract Interaction
+## 🔧 Technology Stack
 
-### Making a Deposit
-javascript
-const amount = ethers.parseEther("1");
-const reason = "Vacation savings";
-const maturityDate = Math.floor(Date.now() / 1000) + (30 24 60 60); // 30 days
-await contract.deposit(reason, maturityDate, { value: amount });
+### Frontend
+- React 18
+- TypeScript
+- Vite
+- TailwindCSS
+- Wagmi
+- Web3Modal
 
-### Withdrawing Funds
-javascript
-await contract.withdraw(depositIndex);
+### Backend
+- Python
+- Flask
+- Web3.py
+- SQLAlchemy
 
-## Contributing
+### Blockchain
+- Avalanche Network
+- Solidity Smart Contracts
+
+## 📖 Documentation
+
+For detailed documentation, please visit our [Wiki](link-to-wiki).
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
 1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## License
+## 📜 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
-- OpenZeppelin for secure contract implementations
-- Avalanche team for the network infrastructure
-- Hardhat team for the development environment
+- [Avalanche](https://www.avax.network/) for the blockchain infrastructure
+- [Core Wallet](https://core.app/) for wallet integration support
+- [Wagmi](https://wagmi.sh/) for React Hooks for Ethereum
 
-## Contact
- Email: titusmainakamau053@gmail.com
- github: https://github.com/TitoKamau053
+## 📞 Contact
 
+Project Link: [Link to the Piggzy app](https://github.com/Avalanche-Team1-DAO-Kenya/Time-Locked-Savings-Contract)
+
+
+
+## 👥 Team
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/TitoKamau053">
+          <img src="https://github.com/TitoKamau053.png" width="100px;" alt="Tito Kamau"/>
+          <br />
+          <sub><b>Tito Kamau</b></sub>
+        </a>
+        <br />
+      </td>
+      <td align="center">
+        <a href="https://github.com/sonimwangi">
+          <img src="https://github.com/sonimwangi.png" width="100px;" alt="Tito Kamau"/>
+          <br />
+          <sub><b>Soni Mwangi</b></sub>
+        </a>
+        <br />
+      </td>
+      <td align="center">
+        <a href="https://github.com/MaryAkothamau053">
+          <img src="https://avatars.githubusercontent.com/u/160223375?v=4"width="100px;" alt="Mary Akoth"/>
+          <br />
+          <sub><b>Mary Akoth</b></sub>
+        </a>
+        <br />
+      </td>
+      <td align="center">
+        <a href="https://github.com/Okututi-Ryan">
+          <img src="https://github.com/Okututi-Ryan.png" width="100px;" alt="Ryan Okututi"/>
+          <br />
+          <sub><b>Ryan Okututi</b></sub>
+        </a>
+        <br />
+      </td>
+      <td align="center">
+        <a href="https://github.com/20407002036">
+          <img src="https://github.com/20407002036.png" width="100px;" alt="Solomon Kaniaru"/>
+          <br />
+          <sub><b>Solomon Kaniaru</b></sub>
+        </a>
+        <br />
+      </td>
+      <td align="center">
+        <a href="https://github.com/Bonfacekiprop">
+          <img src="https://github.com/Bonfacekiprop.png" width="100px;" alt="Bonface Kiprop"/>
+          <br />
+          <sub><b>Bonface Kiprop</b></sub>
+        </a>
+        <br />
+      </td>
+      <!-- Add more team members here -->
+    </tr>
+  </table>
+</div>
+---
+
+<div align="center">
+  Made with ❤️ by the Pigzzy Team
+</div>
