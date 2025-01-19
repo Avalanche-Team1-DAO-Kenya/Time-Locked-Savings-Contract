@@ -29,3 +29,8 @@ build/
 
 # Hardhat Ignition default folder for deployments against a local node
 ignition/deployments/chain-31337
+
+
+=4.5.0
+=8.0.0
+=9.1.0
