@@ -10,7 +10,7 @@ import re
 auth_bp = Blueprint('auth', __name__)
 account_bp = Blueprint('account', __name__)
 
-@auth_bp.route('/api/v1/signup', methods=['POST'])
+@auth_bp.route('/api/v1/auth/signup', methods=['POST'])
 def signup():
     data = request.get_json()
     
@@ -43,7 +43,7 @@ def signup():
         }
     }), 201
 
-@auth_bp.route('/api/v1/login', methods=['POST'])
+@auth_bp.route('/api/v1/auth/login', methods=['POST'])
 def login():
     data = request.get_json()
     
