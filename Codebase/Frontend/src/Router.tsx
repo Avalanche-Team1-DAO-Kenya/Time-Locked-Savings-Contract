@@ -7,7 +7,8 @@ import BalanceDisplay from './components/BalanceDisplay';
 import DepositForm from './components/DepositForm';
 import WithdrawForm from './components/WithdrawForm';
 import LockForm from './components/LockTimer';
-import Home from './components/main';
+import { LandingPage } from './pages/LandingPage';
+import { Dashboard } from './pages/Dashboard';
 import { authService } from './services/auth';
 
 const AppRoutes: React.FC = () => {
@@ -70,7 +71,7 @@ const AppRoutes: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Navigate to="/login" replace />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={
           isAuthenticated ? 
             <Navigate to="/dashboard" /> : 
@@ -83,13 +84,13 @@ const AppRoutes: React.FC = () => {
         } />
         
         {/* Protected Routes */}
-        <Route
-          path="/dashboard"
+        <Route 
+          path="/dashboard" 
           element={
             <ProtectedRoute>
-              <Home onLogout={handleLogout} />
+              <Dashboard onLogout={handleLogout} />
             </ProtectedRoute>
-          }
+          } 
         />
         <Route
           path="/balance"
