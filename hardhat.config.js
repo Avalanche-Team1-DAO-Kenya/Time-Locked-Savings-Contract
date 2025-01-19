@@ -1,9 +1,17 @@
 require("@nomicfoundation/hardhat-toolbox");
-require("@nomicfoundation/hardhat-ignition");
 require("dotenv").config();
 
+/** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: "0.8.20",
+  solidity: {
+    version: "0.8.20",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+    }
+  },
   networks: {
     fuji: {
       url: process.env.FUJI_RPC_URL,
@@ -14,6 +22,5 @@ module.exports = {
       url: "http://127.0.0.1:8545",
       chainId: 31337,
     }
-  },
- 
+  }
 };
