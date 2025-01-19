@@ -25,5 +25,5 @@ This repository contains the Frontend, Backend and Contract for the Pigzy. The M
 5. Geofrey	Rian
 6. Solomon Kaniaru
 7. Boniface Kiprop
-   
+
 
