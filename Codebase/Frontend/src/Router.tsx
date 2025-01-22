@@ -8,7 +8,7 @@ import DepositForm from './components/DepositForm';
 import WithdrawForm from './components/WithdrawForm';
 import LockForm from './components/LockTimer';
 import { LandingPage } from './pages/LandingPage';
-import { Dashboard } from './pages/Dashboard';
+import Dashboard from './pages/Dashboard';
 import { authService } from './services/auth';
 
 const AppRoutes: React.FC = () => {

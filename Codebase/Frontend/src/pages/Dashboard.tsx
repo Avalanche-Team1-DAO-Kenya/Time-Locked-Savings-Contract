@@ -48,7 +48,7 @@ interface HomeProps {
   onLogout: () => void;
 }
 
-const Home: React.FC<HomeProps> = ({ onLogout }) => {
+export const Dashboard: React.FC<HomeProps> = ({ onLogout }) => {
   const { theme, setTheme } = useTheme();
   const [balance, setBalance] = useState(6000)
   const [depositDate, setDepositDate] = useState(new Date())
@@ -324,4 +324,4 @@ const FeatureCard: React.FC<{ icon: React.ReactNode; title: string; description:
   </div>
 );
 
-export default Home
+export default Dashboard
